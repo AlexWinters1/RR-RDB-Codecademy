@@ -1,0 +1,19 @@
+/* Top 25 schools*/
+SELECT email_domain, COUNT(user_id)
+FROM users
+GROUP BY 1
+ORDER BY 2 DESC
+LIMIT 25;
+
+
+/*.edu learners in NY*/
+SELECT COUNT(user_id)
+FROM users
+WHERE city LIKE '%New%York%';
+
+
+/* mobile app users*/
+SELECT COUNT(user_id)
+FROM users
+WHERE mobile_app IS NOT NULL;
+
